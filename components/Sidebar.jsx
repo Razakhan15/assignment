@@ -1,4 +1,4 @@
-import { AppProvider } from "@/pages";
+import { AppProvider } from "@/context/context";
 import {
   ChatBubbleBottomCenterTextIcon,
   CurrencyDollarIcon,
@@ -8,7 +8,7 @@ import { UserIcon } from "@heroicons/react/24/solid";
 import { useContext, useEffect, useState } from "react";
 
 const Sidebar = () => {
-  const { setIsMenuOpen } = useContext(AppProvider);
+  const {isMenuOpen, setIsMenuOpen } = useContext(AppProvider);
   const [open, setOpen] = useState(false);
   useEffect(() => {
     setIsMenuOpen(open);
@@ -66,7 +66,7 @@ const Sidebar = () => {
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-2
+              className={`flex rounded-md p-2 cursor-pointer hover:bg-blue-900 text-gray-300 text-sm items-center gap-x-2
                 `}
             >
               {Menu.src}
