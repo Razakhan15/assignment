@@ -1,16 +1,16 @@
-import { createContext, useContext, useState } from "react";
-import Sidebar, { MenuContext } from "./components/Sidebar";
-import Computer from "./view/Computer";
-import Mobile from "./view/Mobile";
+import Sidebar from "@/components/Sidebar";
+import Computer from "@/components/view/Computer";
+import Mobile from "@/components/view/Mobile";
+import { createContext, useState } from "react";
 
 export const AppProvider = createContext();
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const value = {isMenuOpen, setIsMenuOpen}
+  const value = { isMenuOpen, setIsMenuOpen };
   return (
-    <AppProvider.Provider value = {value}>
+    <AppProvider.Provider value={value}>
       <main className="flex">
         <div className=" relative">
           <Sidebar />

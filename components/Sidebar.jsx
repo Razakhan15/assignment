@@ -1,3 +1,4 @@
+import { AppProvider } from "@/pages";
 import {
   ChatBubbleBottomCenterTextIcon,
   CurrencyDollarIcon,
@@ -5,7 +6,6 @@ import {
 import { BellAlertIcon } from "@heroicons/react/24/solid";
 import { UserIcon } from "@heroicons/react/24/solid";
 import { useContext, useEffect, useState } from "react";
-import { AppProvider } from "..";
 
 const Sidebar = () => {
   const { setIsMenuOpen } = useContext(AppProvider);

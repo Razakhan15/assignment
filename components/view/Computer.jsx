@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Forum from "../components/Forum";
-import Stories from "../components/Stories";
+import Forum from "../Forum";
+import Stories from "../Stories";
 import axios from "axios";
 
 const Computer = () => {
@@ -24,7 +24,8 @@ const Computer = () => {
           discussion fourm
         </h1>
         {data.map((d, i) => (
-          <Forum key={i}
+          <Forum
+            key={i}
             name={d.user}
             comment={d.comment}
             noOfLikes={d.noOfLikes}

@@ -5,11 +5,8 @@ import {
   ShareIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
-const Forum = ({name,
-  comment,
-  noOfLikes,
-  noOfView,
-  noOfComments}) => {
+
+const Forum = ({ name, comment, noOfLikes, noOfView, noOfComments }) => {
   return (
     <div className="mt-10">
       <div className="rounded-lg flex shadow-[rgba(0,0,15,0.3)_5px_5px_4px_0px] py-2 lg:px-5 px-1 lg:gap-5 gap-2">
@@ -23,9 +20,7 @@ const Forum = ({name,
               Sector 2
             </span>
           </div>
-          <p className="break-words my-2 text-xs lg:text-lg">
-            {comment}
-          </p>
+          <p className="break-words my-2 text-xs lg:text-lg">{comment}</p>
           <div className="flex justify-between lg:font-bold">
             <div className="flex items-center gap-0.5 lg:gap-1 my-2">
               <HeartIcon className="h-4 w-4 lg:h-8 lg:w-8" />

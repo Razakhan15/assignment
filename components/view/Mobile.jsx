@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Forum from "../components/Forum";
-import Stories from "../components/Stories";
+import Forum from "../Forum";
+import Stories from "../Stories";
 
 const Mobile = () => {
   const [forum, setForum] = useState(true);
